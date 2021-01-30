@@ -66,7 +66,8 @@ const frontend = [
       "Proficient with concepts like web workers, offline support, semantics and accessibility. At the bleeding edge of browser improvements and web standards.",
     comments: {
       rating: 90,
-      description: "",
+      description:
+        "The only piece missing from this list for mastery would be actual integration of a Progressive Web App, which is a relatively new concept in the web space.",
       bullets: [],
     },
   },
@@ -220,35 +221,138 @@ const integrations = [
   },
 ];
 
-const management = [
+const security = [
   {
     key: "1",
-    competency: "Faciliation",
-    novice: "",
-    intermediate: "",
-    expert: "",
-    master: "",
+    competency: "Application Security",
+    novice:
+      "No package audits. Exposes api keys and secrets in plain text. No automatic dependency upgrades. No runtime upgrades.",
+    intermediate:
+      "Utilize environment variables through industry best practices (.env, dotenv package). Manually upgrades packages through CLI.",
+    expert:
+      "Stores api keys and secrets in dedicated key vault. Automatically upgrades packages. Performs automatic package audit and fix.",
+    master:
+      "Follows runtime LTS schedule and designs an upgrade approach to keep up to date.",
     comments: {
-      rating: 100,
+      rating: 65,
       description:
-        "Cryptosheets utilized a service oriented backend with multiple integrations. They included:",
-      bullets: [
-        "SQL Server",
-        "MongoDB",
-        "Algolia",
-        "Intercom",
-        "Stripe",
-        "Google APIs",
-        "Office APIs",
-        "Google Analytics",
-        "Cloudinary",
-        "Medium API",
-        "SendGrid",
-        "Twitter",
-        "140+ Crypto Providers",
-      ],
+        "Cryptosheets backlog had automated package upgrades and key vault integration. Admittedly the repo had major package creep and could have been scaled back drastically.",
+      bullets: [],
+    },
+  },
+  {
+    key: "2",
+    competency: "Web Security",
+    novice:
+      "No knowledge/Basic knowledge of common attack vectors such as SQL injections, XSS",
+    intermediate:
+      "Utilizes off-the-shelf libraries such as CORS, and ORMs such as Knex to protect against common web security vulnerabilities.",
+    expert:
+      "Keeps track of and integrates OWASP Top 10 security vulnerabilities list",
+    master:
+      "Hires third-party security team to perform consistent audits on codebase.",
+    comments: {
+      rating: 80,
+      description:
+        "Cryptosheets backlog had automated package upgrades and key vault integration. Admittedly the repo had major package creep and could have been scaled back drastically.",
+      bullets: [],
     },
   },
 ];
 
-export { frontend, backend, devops, integrations, management };
+const qa = [
+  {
+    key: "1",
+    competency: "Code Reviews",
+    novice:
+      "Consistently creates reasonable sized PRs that contain description of changes and testing conducted. Consistently provides and responds constructively and respectfully in comments in PRs. Often provides meaningful suggestions in PRs.",
+    intermediate:
+      "Encourages the culture of quality code reviews within the team. Provides guidance on reviews conducted by others for others. Highlights any issues with a PR that might result in release/merge complications. Is highly aware of the team's dependencies and proactive in ensuring the team's PRs are reviewed in a timely manner.",
+    expert:
+      "Encourages the culture of quality and timely code reviews across several teams, also encouraging teams to consider release/merge complications. Provides guidance on reviews conducted by others for others.",
+    master:
+      "Drives and sets the culture of quality and timely code reviews across the organisation, also encouraging teams to consider release/merge complications. Provides guidance on reviews conducted by others for others.",
+    comments: {
+      rating: 60,
+      description:
+        "Cryptosheets never went past a team of 2, so expert and master competencies were not possible.",
+      bullets: [],
+    },
+  },
+  {
+    key: "2",
+    competency: "Testing",
+    novice:
+      "Delivers features with the end-users in mind, understands how the epics in the team's context brings value to end-users. Thinks of ease of use for end-users (internal and external, including developers) Understands their Engineering team's testing approach, and uses quality metrics to identify gaps. Works with their team to recommend solutions that are in accordance with accepted testing frameworks and the testing pyramid.",
+    intermediate:
+      "Drives their team's testing approach, in accordance to Engineering testing strategy, always covering happy paths, variances in data, errors and known edge cases and uses quality metrics to identify gaps. Works with their team to recommend solutions that are in accordance with accepted testing frameworks and the testing pyramid.",
+    expert:
+      "Understands and sets the testing approach of several teams, and uses quality metrics to identify gaps. Works with those teams to recommend solutions that are in accordance with accepted testing frameworks and the testing pyramid. Influences organisation wide testing strategy.",
+    master:
+      "Drives the organisational testing strategy, and uses quality metrics to identify gaps. Works with all teams to recommend solutions that are in accordance with accepted testing frameworks and the testing pyramid.",
+    comments: {
+      rating: 60,
+      description:
+        "Cryptosheets never went past a team of 2, so expert and master competencies were not possible.",
+      bullets: [],
+    },
+  },
+  {
+    key: "3",
+    competency: "Best Practice",
+    novice:
+      "Knows which standards to follow and aims for best practice being applied to work most of the time. Seeks and references guides and known standards as well as help others learn about best practice",
+    intermediate:
+      "Guides the team on following standards and aims for best practice in the team's work. Seeks and references guides and known standards and coaches others on applying best practice in their work",
+    expert:
+      "Guides teams on following standards and aims for best practice across teams. Seeks and references guides and known standards, sets standards and guidelines and coaches others on applying best practice in their work. Drives accountability for reliability measures such as code coverage or defect rates",
+    master:
+      "Champions and guides teams on following standards and aims for best practice across the organisation.",
+    comments: {
+      rating: 60,
+      description:
+        "Cryptosheets never went past a team of 2, so expert and master competencies were not possible.",
+      bullets: [],
+    },
+  },
+];
+
+const management = [
+  {
+    key: "1",
+    competency: "Facilitation",
+    novice: "",
+    intermediate:
+      "Facilitates discussions within their team, ensuring that everyone has an opportunity to share their opinion and be heard, and that discussion outcomes tie to stated goals.",
+    expert:
+      "Facilitates discussions across teams, ensuring that everyone has an opportunity to share their opinion and be heard, and that discussion outcomes tie to stated goals.",
+    master:
+      "Facilitates organization-wide discussions, ensuring that everyone has an opportunity to share their opinion and be heard, and that discussion outcomes tie to stated goals.",
+    comments: {
+      rating: 80,
+      description:
+        "Consistently engaged in cross-team discussions (Finance to Business, Finance to Marketing, Finance to Brand) at Capital One. N/A at Cryptosheets.",
+      bullets: [],
+    },
+  },
+  {
+    key: "2",
+    competency: "Growing People",
+    novice:
+      "Seeks out mentorship and coaching to grow their own experience. Sometimes mentors their teammates in an open, respectful, flexible, empathetic manner.",
+    intermediate:
+      "Mentors their teammates in an open, respectful, flexible, empathetic manner. Developing techniques on effective coaching strategies for different individuals. Seeks out mentoring opportunities specifically to increase knowledge in parts of the system that is not well understood.",
+    expert:
+      "Mentors direct reports and skips in an open, respectful, flexible, empathetic manner. Fosters a culture of mentoring across teams by seeking out mentoring and coaching opportunities for themselves and others, and supports others in their growth as mentors",
+    master:
+      "Mentors across the organisation in an open, respectful, flexible, empathetic manner. Fosters an organisational culture of mentoring and coaching by seeking out mentoring opportunities for themselves and others, and supports others in their growth as mentors.",
+    comments: {
+      rating: 70,
+      description:
+        "Lead a team of 6 at Capital One. Engineering team at Cryptosheets never grew past 2.",
+      bullets: [],
+    },
+  },
+];
+
+export { frontend, backend, devops, integrations, security, qa, management };
