@@ -1,6 +1,6 @@
 import React from "react";
 import { Tabs } from "antd";
-import { frontend, backend, devops } from "./data";
+import { frontend, backend, devops, integrations, management } from "./data";
 
 import CompetencyTable from "./CompetencyTable";
 
@@ -22,17 +22,17 @@ export default function Competencies() {
       <TabPane tab="DevOps" key="3">
         <CompetencyTable data={devops} />
       </TabPane>
-      <TabPane tab="Integrations" key="3">
+      <TabPane tab="Integrations" key="4">
+        <CompetencyTable data={integrations} />
+      </TabPane>
+      <TabPane tab="Security" key="5">
         Content of Tab Pane 3
       </TabPane>
-      <TabPane tab="Security" key="4">
+      <TabPane tab="QA" key="6">
         Content of Tab Pane 3
       </TabPane>
-      <TabPane tab="QA" key="5">
-        Content of Tab Pane 3
-      </TabPane>
-      <TabPane tab="Management" key="6">
-        Content of Tab Pane 3
+      <TabPane tab="Management" key="7">
+        <CompetencyTable data={management} />
       </TabPane>
     </Tabs>
   );

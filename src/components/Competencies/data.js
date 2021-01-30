@@ -91,32 +91,22 @@ const backend = [
   {
     key: "1",
     competency: "APIs",
-    novice: "Needs to look up the documentation frequently",
-    intermediate: "Has the most frequently used APIs in memory",
-    expert: "Vast and In-depth knowledge of the API",
+    novice:
+      "Knows how to prop up an Express server. Knowledge of HTTP, including: payloads, semantics, compression, ssl/tls, JSON, serializations",
+    intermediate:
+      "Knowledge of various API protocols such as REST, SOAP, WebSocket.",
+    expert: "Knowledge and integration of API facades such as GraphQL",
     master:
-      "Has written libraries that sit on top of the API to simplify frequently used tasks and to fill in gaps in the API",
+      "Has written libraries that sit on top of the API to simplify frequently used tasks and to fill in gaps in the API. Experience integrating other patterns such as RPC. Experience with data payloads such as protocol buffers.",
     comments: {
-      rating: 100,
-      description: "",
-      bullets: ["bullet 1", "bullet 2"],
+      rating: 89,
+      description:
+        "Cryptosheets utilized a service-oriented REST/WebSocket backend for all properties. Backend initially was coded using GraphQL, but was reverted due to development speed constraints. I have never integrated an RPC backend, or protocol buffers.",
+      bullets: [],
     },
   },
   {
     key: "2",
-    competency: "DevOps",
-    novice: "John Brown",
-    intermediate: 32,
-    expert: "New York No. 1 Lake Park",
-    master: "test",
-    comments: {
-      rating: 60,
-      description: "",
-      bullets: ["bullet 1", "bullet 2"],
-    },
-  },
-  {
-    key: "3",
     competency: "Databases",
     novice: "Thinks that Excel is a database",
     intermediate:
@@ -128,7 +118,7 @@ const backend = [
     comments: {
       rating: 80,
       description: "",
-      bullets: ["bullet 1", "bullet 2"],
+      bullets: [],
     },
   },
 ];
@@ -149,6 +139,116 @@ const devops = [
       bullets: [],
     },
   },
+  {
+    key: "2",
+    competency: "Scaling",
+    novice:
+      "Single process application. No consideration for scaling past inherent language capabilities.",
+    intermediate:
+      "Utilized single-machine scaling methods such as the cluster module.",
+    expert:
+      "Experience with load balancing, compression, TLS termination, and rate limiting.",
+    master: "Successfully deployed distributed, multi-region systems. ",
+    comments: {
+      rating: 81,
+      description:
+        "Cryptosheets utilized a multi-core solution with integrated autoscaling based on CPU/RAM/Throughput",
+      bullets: [],
+    },
+  },
+  {
+    key: "3",
+    competency: "Observability",
+    novice: "Basic logging, no long term logging solution. No health checks. ",
+    intermediate:
+      "Application health checks, alerting with tools such as Cabot.",
+    expert:
+      "Cloud based metric tracking and visualizations using tools such as Graphite, StatsD, and Grafana.",
+    master: "Distributed request tracing with tools such as Zipkin.",
+    comments: {
+      rating: 89,
+      description:
+        "Cryptosheets utilized DataDog for long term log storage, and used the DataDog agent for distributed request tracing.",
+      bullets: [],
+    },
+  },
+  {
+    key: "4",
+    competency: "Containers",
+    novice: "Has never utilized containers.",
+    intermediate: "Built one-off, or single serve images.",
+    expert: "Multi-stage builds and container optimization techniques.",
+    master: "Has deployed a container orchestration tool such as Kubernetes.",
+    comments: {
+      rating: 77,
+      description: "",
+      bullets: [],
+    },
+  },
 ];
 
-export { frontend, backend, devops };
+const integrations = [
+  {
+    key: "1",
+    competency: "Systems Decomposition",
+    novice: "Not able to think above the level of a single file/class",
+    intermediate:
+      "Able to break up problem space and design solution as long as it is within the same platform/technology",
+    expert: "Able to design systems that span multiple technologies/platforms.",
+    master:
+      "Able to visualize and design complex systems with multiple product lines and integrations with external systems. Also should be able to design operations support systems like monitoring, reporting, fail overs etc.",
+    comments: {
+      rating: 100,
+      description:
+        "Cryptosheets utilized a service oriented backend with multiple integrations. They included:",
+      bullets: [
+        "SQL Server",
+        "MongoDB",
+        "Algolia",
+        "Intercom",
+        "Stripe",
+        "Google APIs",
+        "Office APIs",
+        "Google Analytics",
+        "Cloudinary",
+        "Medium API",
+        "SendGrid",
+        "Twitter",
+        "140+ Crypto Providers",
+      ],
+    },
+  },
+];
+
+const management = [
+  {
+    key: "1",
+    competency: "Faciliation",
+    novice: "",
+    intermediate: "",
+    expert: "",
+    master: "",
+    comments: {
+      rating: 100,
+      description:
+        "Cryptosheets utilized a service oriented backend with multiple integrations. They included:",
+      bullets: [
+        "SQL Server",
+        "MongoDB",
+        "Algolia",
+        "Intercom",
+        "Stripe",
+        "Google APIs",
+        "Office APIs",
+        "Google Analytics",
+        "Cloudinary",
+        "Medium API",
+        "SendGrid",
+        "Twitter",
+        "140+ Crypto Providers",
+      ],
+    },
+  },
+];
+
+export { frontend, backend, devops, integrations, management };
