@@ -1,24 +1,19 @@
-import React from "react";
-import { Typography } from "antd";
-
-const { Paragraph } = Typography;
-
-const template = [
-  {
-    key: "1",
-    competency: "APIs",
-    novice: "Needs to look up the documentation frequently",
-    intermediate: "Has the most frequently used APIs in memory",
-    expert: "Vast and In-depth knowledge of the API",
-    master:
-      "Has written libraries that sit on top of the API to simplify frequently used tasks and to fill in gaps in the API",
-    comments: {
-      rating: 100,
-      description: "",
-      bullets: ["bullet 1", "bullet 2"],
-    },
-  },
-];
+// const template = [
+//   {
+//     key: "1",
+//     competency: "APIs",
+//     novice: "Needs to look up the documentation frequently",
+//     intermediate: "Has the most frequently used APIs in memory",
+//     expert: "Vast and In-depth knowledge of the API",
+//     master:
+//       "Has written libraries that sit on top of the API to simplify frequently used tasks and to fill in gaps in the API",
+//     comments: {
+//       rating: 100,
+//       description: "",
+//       bullets: ["bullet 1", "bullet 2"],
+//     },
+//   },
+// ];
 
 const frontend = [
   {
