@@ -3,6 +3,23 @@ import { Typography } from "antd";
 
 const { Paragraph } = Typography;
 
+const template = [
+  {
+    key: "1",
+    competency: "APIs",
+    novice: "Needs to look up the documentation frequently",
+    intermediate: "Has the most frequently used APIs in memory",
+    expert: "Vast and In-depth knowledge of the API",
+    master:
+      "Has written libraries that sit on top of the API to simplify frequently used tasks and to fill in gaps in the API",
+    comments: {
+      rating: 100,
+      description: "",
+      bullets: ["bullet 1", "bullet 2"],
+    },
+  },
+];
+
 const frontend = [
   {
     key: "1",
@@ -87,13 +104,13 @@ const backend = [
   },
   {
     key: "2",
-    competency: "Scripting",
+    competency: "DevOps",
     novice: "John Brown",
     intermediate: 32,
     expert: "New York No. 1 Lake Park",
     master: "test",
     comments: {
-      rating: 100,
+      rating: 60,
       description: "",
       bullets: ["bullet 1", "bullet 2"],
     },
@@ -116,4 +133,22 @@ const backend = [
   },
 ];
 
-export { frontend, backend };
+const devops = [
+  {
+    key: "1",
+    competency: "Source Code Management",
+    novice: "",
+    intermediate: "",
+    expert:
+      "Proficient in using CVS and SVN features. Knows how to branch and merge, use patches setup repository properties etc.",
+    master:
+      "Knowledge of distributed VCS systems. Has tried out Bzr/Mercurial/Darcs/Git",
+    comments: {
+      rating: 100,
+      description: "",
+      bullets: [],
+    },
+  },
+];
+
+export { frontend, backend, devops };
